@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg shift navbar-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="list-unstyled navbar-nav mx-auto order-0 d-flex justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" routerLink=""  routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" >Kezdőlap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="menu" routerLinkActive="active-link">Édességek</a>
+            <div class="legordulofuggony">
+              <ul><a routerLink="cukorkak" routerLinkActive="active-link">Cukorkák</a></ul>
+              <ul><a routerLink="csokoladek" routerLinkActive="active-link">Csokoládék</a></ul>
+              <ul><a routerLink="ragcsak" routerLinkActive="active-link">Rágcsák</a></ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="about" routerLinkActive="active-link">Rólunk</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="contact" routerLinkActive="active-link">Kapcsolat</a>
+          </li>
+        </ul>
+        <a class="nav-link" routerLink="kosar" routerLinkActive="active-link"><span class="bi bi-bag kosar"></span></a>
+      </div>
+      <div class="belepes">
+        <!-- <mat-toolbar color="primary" class="app-header">
+          <span class="nav-tool-items">
+            <a mat-button routerLink="signin" routerLinkActive="active">Belépés</a>
+            <a mat-button mat-raised-button routerLink="register" routerLinkActive="active">Regisztráció</a>
+          </span>
+        </mat-toolbar> -->
+      </div>
+    </div>
+  </nav>

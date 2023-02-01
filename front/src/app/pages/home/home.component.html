@@ -1,0 +1,131 @@
+<!-- step  -->
+<div class="container mt-5 mb-5">
+  <!-- <div class="kozepre"> -->
+    <!-- <div class="slider">
+        <div class="slides">
+            <input type="radio" name="gomb" id="gombocska1">
+            <input type="radio" name="gomb" id="gombocska2">
+            <input type="radio" name="gomb" id="gombocska3">
+            <input type="radio" name="gomb" id="gombocska4">
+            <div class="slide first">
+                <img src="/assets/img/stitch1.jpg" alt="stitch">
+            </div>
+            <div class="slide">
+                <img src="/assets/img/stitch2.jpg" alt="stitch2">
+            </div>
+            <div class="slide">
+                <img src="/assets/img/stitch3.jpg" alt="stitch3">
+            </div>
+            <div class="slide">
+                <img src="/assets/img/stitch4.jpg" alt="stitch4">
+            </div>
+
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+
+        </div>
+
+        <div class="navigation-manual">
+            <label for="gombocska1" class="manual-btn"></label>
+            <label for="gombocska2" class="manual-btn"></label>
+            <label for="gombocska3" class="manual-btn"></label>
+            <label for="gombocska4" class="manual-btn"></label>
+        </div>
+    </div>
+  </div> -->
+    <div class="kozepre">
+        <div class="slider">
+            <div class="slides">
+                <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <!-- Carousel indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+                        <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+                        <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+                        <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
+                    </ol>
+
+                    <!-- Wrapper for carousel items -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/assets/img/haribo.jpg" class="d-block w-100" alt="Slide 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/assets/img/milka.jpg" class="d-block w-100" alt="Slide 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/assets/img/mogyi.jpg" class="d-block w-100" alt="Slide 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/assets/img/mars haza.jpg" class="d-block w-100" alt="Slide 4">
+                        </div>
+                    </div>
+                    <!-- Carousel controls -->
+                    <!-- <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3 d-flex justify-content-center">
+        <!-- one  -->
+        <div class="col-lg-3 mt-1 ">
+            <a routerLink="haribo">
+                <div class="stepBox">
+                    <img src="assets/img/candy1.jpg">
+                </div>
+            </a>
+        </div>
+<!-- two -->
+        <div class="col-lg-3 mt-1">
+            <a routerLink="milka">
+              <div class="stepBox">
+                  <img src="assets/img/candy2.jpg">
+              </div>
+            </a>
+        </div>
+        <!-- three  -->
+        <div class="col-lg-3 mt-1">
+            <a routerLink="mogyi">
+              <div class="stepBox">
+                  <img src="assets/img/candy3.jpg">
+              </div>
+            </a>
+        </div>
+        <div class="col-lg-3 mt-1">
+            <a routerLink="mars">
+              <div class="stepBox">
+                  <img src="assets/img/candy4.jpg">
+              </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- foodbox  -->
+<div class="container mt-4 mb-4">
+    <h1 class="text-center highlight">Legnépszerűbbek:</h1>
+    <div class="row">
+        <div class="col-lg-3 mt-3" *ngFor="let fd of foodData;index as i">
+            <div class="candybox" *ngIf="i<=3">
+              <div class="card">
+                <img src={{fd.kep}}>
+                <h1>{{fd.nev}}</h1>
+                <p class="price">{{fd.ar}} Ft</p>
+                <p>{{fd.reszletek}}</p>
+                <p><button (click)="putItemToCart(fd.ID)" class="buybtn">Kosárba &nbsp;<i class="bi bi-bag"></i></button></p>
+              </div>
+            </div>
+        </div>
+    </div>
+    <a routerLink="menu" class="megtobbtn">Még több...<i class="bi bi-arrow-right"></i></a>
+</div>

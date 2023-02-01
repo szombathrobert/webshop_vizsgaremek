@@ -1,0 +1,14 @@
+<div class="container mt-5 mb-5">
+  <div class="row">
+    <div class="col-lg-4" *ngFor="let fd of foodData">
+      <div class="candybox mt-3 mb-3">
+        <div class="card">
+          <img src={{fd.kep}}>
+          <h1>{{fd.nev}}</h1>
+          <p class="price">{{fd.ar}} Ft</p>
+          <p>{{fd.reszletek}}</p>
+          <p><button (click)="putItemToCart(fd.ID)" class="buybtn">Kosárba &nbsp;<i class="bi bi-bag"></i></button></p>
+      </div>
+    </div>
+  </div>
+</div>
